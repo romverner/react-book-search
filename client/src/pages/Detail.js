@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
-import Jumbotron from "../components/Jumbotron";
+import ImagePr from "../components/ImagePr";
 import API from "../utils/API";
 
 class Detail extends Component {
@@ -21,16 +21,16 @@ class Detail extends Component {
       <Container fluid>
         <Row>
           <Col size="md-12">
-            <Jumbotron>
+            <div className="text-center">
               <h1>
                 {this.state.book.title} by {this.state.book.author}
               </h1>
-            </Jumbotron>
+            </div>
           </Col>
         </Row>
         <Row>
           <Col size="md-2">
-            <img className="img" href={this.state.book.image} />
+            <ImagePr image={this.state.book.image} />
           </Col>
           <Col size="md-10">
             <article>
