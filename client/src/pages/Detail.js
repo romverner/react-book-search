@@ -29,7 +29,10 @@ class Detail extends Component {
           </Col>
         </Row>
         <Row>
-          <Col size="md-10 md-offset-1">
+          <Col size="md-2">
+            <img className="img" href={this.state.book.image} />
+          </Col>
+          <Col size="md-10">
             <article>
               <h1>Synopsis</h1>
               <p>
