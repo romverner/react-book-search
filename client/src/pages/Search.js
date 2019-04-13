@@ -36,7 +36,7 @@ class Search extends Component {
         <Row>
           <Col size="md sm-12">
             <Jumbotron>
-                <h1>Search Books!</h1>
+                <h1>Search Books!</h1>  
             </Jumbotron>
             
             <SearchForm
