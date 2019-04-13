@@ -3,7 +3,9 @@ import API from "../utils/API";
 import Container from "../components/Container";
 import SearchForm from "../components/SearchForm";
 import SearchResults from "../components/SearchResults";
-import Alert from "../components/Alert";
+import Jumbotron from "../components/Jumbotron";
+import Row from "../components/Row";
+import Col from "../components/Col";
 
 class Search extends Component {
   state = {
@@ -30,23 +32,23 @@ class Search extends Component {
   };
   render() {
     return (
-      <div>
-        <Container style={{ minHeight: "80%" }}>
-          <h1 className="text-center">Search By Breed!</h1>
-          <Alert
-            type="danger"
-            style={{ opacity: this.state.error ? 1 : 0, marginBottom: 10 }}
-          >
-            {this.state.error}
-          </Alert>
-          <SearchForm
-            handleFormSubmit={this.handleFormSubmit}
-            handleInputChange={this.handleInputChange}
-            books={this.state.books}
-          />
-          <SearchResults results={this.state.results} />
+        <Container fluid>
+        <Row>
+          <Col size="md sm-12">
+            <Jumbotron>
+                <h1>Search Books!</h1>
+            </Jumbotron>
+            
+            <SearchForm
+              handleFormSubmit={this.handleFormSubmit}
+              handleInputChange={this.handleInputChange}
+              books={this.state.books}
+            />
+            <SearchResults results={this.state.results} />
+          
+            </Col>
+          </Row>
         </Container>
-      </div>
     );
   }
 }

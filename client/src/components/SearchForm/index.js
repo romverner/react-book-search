@@ -17,11 +17,6 @@ function SearchForm(props) {
           placeholder="Type in a book to begin"
           id="book"
         />
-        <datalist id="books">
-          {props.books.map(book => (
-            <option value={book} key={book} />
-          ))}
-        </datalist>
         <button type="submit" onClick={props.handleFormSubmit} className="btn btn-success">
           Search
         </button>
